@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Edu Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      height: 40px;
+    }
+
+    .logo-title span {
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+      text-align: center;
+    }
+
+    #cart-items {
+      margin: 1.5em 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1em;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    button {
+      padding: 0.8em 1.5em;
+      background-color: #1baf4d;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #15983f;
+    }
+
+    footer {
+      background: linear-gradient(to right, black);
+      color: #fff;
+      text-align: center;
+      padding: 0.8em;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="Edu Market Logo" />
+      <span>Edu Market</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Today's Deals</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Shopping Cart</h1>
+    <div id="cart-items">Your cart is currently empty.</div>
+    <p>Total: ₹ <span id="total-price">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Edu Market</p>
+  </footer>
+
+  <script>
+    function checkout() {
+      alert("Proceeding to checkout...");
+    }
+  </script>
+
+</body>
+</html>

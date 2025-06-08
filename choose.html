@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Choose - Edu Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5em;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2em;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1.5em;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .auth-buttons button {
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .sell-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .buy-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .auth-buttons button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 1em;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .auth-buttons {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Edu Market</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Deals</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p style="text-align:center; margin-bottom: 10px;">We're glad to see you! Let’s get started.</p>
+    <h1>Choose an Option</h1>
+    <div class="auth-buttons">
+      <button class="sell-btn" onclick="location.href='sell.html'">Sell</button>
+      <button class="buy-btn" onclick="location.href='buy.html'">Buy</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Edu Market</p>
+  </footer>
+
+</body>
+</html>

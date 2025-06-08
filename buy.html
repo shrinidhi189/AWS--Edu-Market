@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy - Edu Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 2em;
+      text-align: center;
+      padding-bottom: 120px; /* space for footer */
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    #search-container {
+      margin-bottom: 2em;
+    }
+
+    #search-bar {
+      padding: 0.7em 1em;
+      width: 250px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    #product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    .product {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1em;
+      width: 200px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 0.5em 0 0.3em;
+      font-size: 1.1em;
+    }
+
+    .product p {
+      margin: 0.2em 0;
+    }
+
+    .like-button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .like-button img {
+      width: 24px;
+      height: 24px;
+    }
+
+    footer {
+      background: linear-gradient(to right, black);
+      color: #fff;
+      text-align: center;
+      padding: 0.8em;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      #search-bar {
+        width: 80%;
+      }
+      .product {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <span style="font-size: 1.3em; font-weight: 600;">Edu Market</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Today's Deals</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="choose.html">Choose</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Buy Products</h1>
+
+    <div id="search-container">
+      <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="filterProducts()">
+    </div>
+
+    <div id="product-list">
+      <div class="product">
+        <button class="like-button" onclick="likeProduct(this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart">
+        </button>
+        <img src="https://m.media-amazon.com/images/I/813hfEpmb3L.jpg" alt="Stationary set">
+        <h3>Stationary Set</h3>
+        <p>Starting at ₹30</p>
+      </div>
+
+      <div class="product">
+        <button class="like-button" onclick="likeProduct(this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart">
+        </button>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6UQugtBVL_D5894vzMcpv07fFNMHrFtzfT6WTHe4ekcLK0JnhABlT6Jm5QNkMYjkIyI&usqp=CAU" alt="Notebooks">
+        <h3>Notebooks</h3>
+        <p>Starting at ₹20</p>
+      </div>
+
+      <div class="product">
+        <button class="like-button" onclick="likeProduct(this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart">
+        </button>
+        <img src="https://rukminim2.flixcart.com/image/832/832/l5iid8w0/regionalbooks/k/x/i/science-publication-reference-books-set-chemistry-physics-and-original-imagg5vuy2bdhdw3.jpeg?q=70&crop=false" alt="Reference Books">
+        <h3>Reference Books</h3>
+        <p>Starting at ₹45</p>
+      </div>
+
+      <div class="product">
+        <button class="like-button" onclick="likeProduct(this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart">
+        </button>
+        <img src="https://m.media-amazon.com/images/I/81qQrGur9QL.jpg" alt="Art Supplies">
+        <h3>Art Supplies</h3>
+        <p>Starting at ₹35</p>
+      </div>
+
+      <div class="product">
+        <button class="like-button" onclick="likeProduct(this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart">
+        </button>
+        <img src="https://www.smilykiddos.in/cdn/shop/collections/online-photo-contest-banner_1024x1024.jpg?v=1713507011" alt="Bag Packs">
+        <h3>Bag Packs</h3>
+        <p>Starting at ₹70</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Edu Market</p>
+  </footer>
+
+  <script>
+    function filterProducts() {
+      const searchValue = document.getElementById('search-bar').value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const name = product.querySelector('h3').textContent.toLowerCase();
+        product.style.display = name.includes(searchValue) ? '' : 'none';
+      });
+    }
+
+    function likeProduct(button) {
+      alert('❤️ Product liked!');
+    }
+  </script>
+
+</body>
+</html>

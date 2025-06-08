@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu Market</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #6a5acd, #e26ccf);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 1.2em 2.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        header div:first-child {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.2em;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: gold;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+            left: 0;
+            background: gold;
+        }
+
+        nav a.active {
+            color: gold;
+        }
+
+        .buttons a {
+            margin-left: 0.8em;
+            padding: 0.6em 1.4em;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .buttons .signin { background-color: #1a4dae; }
+        .buttons .signup { background-color: #1baf4d; }
+
+        .buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            flex: 1;
+            text-align: center;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        main img {
+            width: 280px;        /* Smaller logo width */
+            height: auto;        /* Maintain aspect ratio */
+            
+            margin: 0.4em ;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.1em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and text */
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* Adjust based on your site */
+  padding: 10px;
+}
+
+.logo-container img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
+        .tagline {
+            font-size: 1.4em;
+            margin-bottom: 1em;
+            opacity: 0.9;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1.5em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .action-buttons a {
+            padding: 0.9em 2em;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+            min-width: 150px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .action-buttons .signup { background-color: #1baf4d; }
+        .action-buttons .signin { background-color: #205acf; }
+
+        .action-buttons a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5em;
+            background-color: rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            margin-top: auto;
+        }
+
+        footer div a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5em;
+            transition: color 0.3s ease;
+        }
+
+        footer div a:hover {
+            color: gold;
+        }
+
+        @media (max-width: 768px) {
+            main img {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                padding: 1em 0.5em;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 0.5em 0;
+            }
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .buttons a {
+                margin-bottom: 0.5em;
+                width: 120px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .tagline {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="C:\Users\MBU\Desktop\ecoedumarket\Screenshot 2025-06-08 154352.png" alt="Logo" />
+            <span>EduMarket</span>
+          </div>
+          
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="products.html">Today's Deals</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact Us</a>
+            
+        </nav>
+        <div class="buttons">
+            <a href="signin.html" class="signin">Sign In</a>
+            <a href="signup.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ✅ Update this with the correct image path for web -->
+        <img src="C:\Users\MBU\Desktop\ecoedumarket\Screenshot 2025-06-08 154352.png" alt="Eco Edu Market Logo" /> 
+        <h1>Welcome to Edu Market!</h1>
+        <div class="tagline">One Man's Trash is another man's Treasure!</div>
+        <div class="action-buttons">
+            <a href="signup.html" class="signup">Sign Up</a>
+            <a href="signin.html" class="signin">Sign In</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">Contact Us</a> | 
+            <a href="#">Today's Deals</a>
+        </div>
+        <p>© 2025 Edu Market</p>
+    </footer>
+
+</body>
+</html>

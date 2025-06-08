@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - Eco Edu Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body 
+    {
+      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2em;
+      border-radius: 12px;
+      width: 350px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-size: 0.9em;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6em;
+      border-radius: 6px;
+      border: none;
+      margin-top: 0.3em;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+      margin-top: 1.5em;
+      width: 100%;
+      padding: 0.8em;
+      border: none;
+      border-radius: 6px;
+      background-color: #205acf;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a45a1;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 1em;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    footer {
+        background: linear-gradient(to right, black);
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        position: fixed; /* or absolute if needed */
+        bottom: 0;
+    }
+  </style>
+</head>
+<body>
+    <form class="form-box" onsubmit="return redirectAfterLogin(event)">
+        <h2>Sign In</h2>
+      
+        <label for="Email">Email ID</label>
+        <input type="email" id="username" placeholder="Enter your Email ID" required />
+      
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      
+        <button type="submit">Sign In</button>
+      
+        <center>
+          <p>Don't have an account? 
+            <a href="signup.html" style="color:#e1c910"><u>Sign Up</u></a>
+          </p>
+        </center>
+        <a href="index.html">← Back to Home</a>
+      </form>
+      
+      <script>
+        function redirectAfterLogin(event) {
+          event.preventDefault(); // prevent default form submission
+      
+          const username = document.getElementById("username").value.trim();
+          const password = document.getElementById("password").value.trim();
+      
+          if (username === "" || password === "") {
+            alert("Please fill in all fields.");
+            return false;
+          }
+      
+          window.location.href = "choose.html";
+          return false;
+        }
+      </script>
+      
+  <footer>
+    <p>&copy; 2025 Eco Edu Market</p>
+</footer>
+</body>
+</html>
