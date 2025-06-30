@@ -22,32 +22,48 @@
     }
 
     header {
-      background: linear-gradient(to right, #6a5acd, #e26ccf);
+      background: white;
+      color: black;
       padding: 1em 2em;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-weight: 600;
+      flex-wrap: wrap;
     }
 
-    .logo {
-      font-size: 1.5em;
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .logo-title img {
+      height: 40px;
+    }
+
+    .logo-title span {
+      font-size: 1.4em;
+      font-weight: 600;
     }
 
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5em;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
       text-decoration: none;
-      color: white;
+      color: black;
       font-weight: 500;
     }
 
     nav ul li a:hover {
-      color: gold;
+      color: #6a5acd;
     }
 
     main {
@@ -102,9 +118,7 @@
       text-align: center;
       padding: 1em;
       color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: auto;
     }
 
     @media (max-width: 600px) {
@@ -115,6 +129,8 @@
       nav ul {
         flex-direction: column;
         align-items: flex-end;
+        gap: 0.5em;
+        margin-top: 0.5em;
       }
     }
   </style>
@@ -122,7 +138,10 @@
 <body>
 
   <header>
-    <div class="logo">Edu Market</div>
+    <a href="index.html" class="logo-title">
+      <img src="https://github.com/shrinidhi189/AWS--Edu-Market/blob/main/Eco%20edu%20Market%20-%20logo.png?raw=true" alt="Edu Market Logo">
+      <span>Edu Market</span>
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
